@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mpp-assembly-browser", "mpp-assembly-browser\mpp-assembly-browser.csproj", "{B521641D-2BC1-4F21-98D1-4E6385A2465F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{BEF3C1D2-30A9-4775-B205-7B7B7A2F2937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B521641D-2BC1-4F21-98D1-4E6385A2465F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B521641D-2BC1-4F21-98D1-4E6385A2465F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B521641D-2BC1-4F21-98D1-4E6385A2465F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B521641D-2BC1-4F21-98D1-4E6385A2465F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEF3C1D2-30A9-4775-B205-7B7B7A2F2937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF3C1D2-30A9-4775-B205-7B7B7A2F2937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEF3C1D2-30A9-4775-B205-7B7B7A2F2937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEF3C1D2-30A9-4775-B205-7B7B7A2F2937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
