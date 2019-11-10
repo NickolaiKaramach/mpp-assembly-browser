@@ -1,9 +1,9 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using mpp_assembly_browser;
 using mpp_assembly_browser.action;
-using TestAssembly;
+using TestingAssembly;
 
 namespace UnitTests
 {
@@ -14,8 +14,8 @@ namespace UnitTests
 
         //To automatically add test assembly to runtime
         private C _myClass = new C();
-        private static readonly Assembly TestAssembly = Assembly.Load("TestAssembly");
-        private readonly string _testLocation = TestAssembly.Location;
+        private static readonly Assembly TestingAssembly = Assembly.Load("TestingAssembly");
+        private readonly string _testLocation = TestingAssembly.Location;
 
         [TestMethod]
         public void NamespaceTest()
@@ -23,7 +23,7 @@ namespace UnitTests
             var location = Assembly.GetExecutingAssembly().Location;
             var namespaces = _assemblyBrowser.GetNamespaces(_testLocation);
             var _namespace = namespaces[0];
-            var currentNamespace = TestAssembly.GetTypes()[1].Namespace;
+            var currentNamespace = TestingAssembly.GetTypes()[1].Namespace;
             Assert.AreEqual(_namespace.DeclarationName, currentNamespace);
         }
 
@@ -35,7 +35,7 @@ namespace UnitTests
             var _namespace = namespaces[0];
             var types = _namespace.Infos;
 
-            Assert.AreEqual(TestAssembly.GetTypes().Length, types.Count);
+            Assert.AreEqual(TestingAssembly.GetTypes().Length, types.Count);
         }
 
         [TestMethod]
@@ -45,8 +45,8 @@ namespace UnitTests
             var namespaces = _assemblyBrowser.GetNamespaces(_testLocation);
             foreach (var _namespace in namespaces)
             {
-                if (_namespace.DeclarationName == "TestAssembly" ||
-                    _namespace.DeclarationName == "TestAssembly.Another")
+                if (_namespace.DeclarationName == "TestingAssembly" ||
+                    _namespace.DeclarationName == "TestingAssembly.Another")
                 {
                     flag = true;
                 }
@@ -66,7 +66,7 @@ namespace UnitTests
                 {
                     bool flag = false;
                     ;
-                    foreach (var member in ((ContainerInfo) type).Infos)
+                    foreach (var member in ((ContainerInfo)type).Infos)
                     {
                         if (member.Name == "ExtMethod")
                         {
